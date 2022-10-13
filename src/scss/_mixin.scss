@@ -1,0 +1,50 @@
+@mixin mobile-desktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin table {
+  @media (max-width:768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width:576px) {
+    @content;
+  }
+}
+
+
+@mixin focus-link {
+  &:focus-visible {
+    outline: none;
+    background-color: var(--orange);
+  }
+}
+
+@mixin hover-link {
+  &:hover {
+    color: var(--orange);
+  }
+}
+
+@mixin active-link {
+  &:active {
+    color: var(--orange-dark);
+  }
+}
+
+
+@mixin hover-icon {
+  &:hover{
+    fill: var(--orange);
+  }
+}
+
+@mixin active-icon {
+  &:active {
+    fill: var(--orange-dark);
+  }
+}

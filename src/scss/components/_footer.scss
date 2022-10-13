@@ -1,0 +1,147 @@
+.footer {
+  background-color: var(--primary-black);
+
+  &__container {
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    gap: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    @include mobile-desktop {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include table {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      justify-items: center;
+      padding: 0;
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    grid-column: 1/5;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 6px;
+    @include mobile-desktop {
+      grid-column: 1/4;
+    }
+    @include table {
+      grid-column: 1/4;
+    }
+    @include mobile {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+      padding: 14px 15px;
+      width: 100%;
+      align-items: center;
+      row-gap: 2px;
+      background-color: var(--dark-grey);
+    }
+  }
+
+  &__logo-img {
+    width: 190px;
+    @include mobile-desktop {
+      width: 166px;
+    }
+    @include mobile {
+      width: 111px;
+    }
+  }
+
+  &__logo-copy {
+    font-family: TTFirsNeue;
+    font-size: 14px;
+    line-height: 18px;
+    color: #e9e9e9;
+    @include mobile {
+      font-size: 10px;
+      line-height: 13px;
+    }
+  }
+
+  &__copy-wrapper {
+    grid-column: 5/10;
+    @include mobile-desktop {
+      grid-column: 4/7;
+    }
+    @include table {
+      display: none;
+    }
+  }
+
+  &__copy-descr {
+    max-width: 361px;
+    line-height: 22px;
+    color: var(--grey);
+    @include mobile-desktop {
+      font-size: 15px;
+    }
+  }
+
+  &__copy-autor {
+    line-height: 22px;
+    color: #666666;
+  }
+
+  &__social {
+    grid-column: 10/13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: end;
+    row-gap: 8px;
+    max-width: 161px;
+    @include mobile-desktop {
+      grid-column: 7/9;
+    }
+    @include table {
+      grid-column: 4/7;
+    }
+    @include mobile {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      padding: 31px 0 18px;
+      justify-self: center;
+      align-items: center;
+      max-width: 100%;
+    }
+  }
+
+  &__social-name {
+    line-height: 22px;
+    color: var(--grey);
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    column-gap: 21px
+  }
+
+  &__social-item {
+  }
+
+  &__social-link {
+    outline: none;
+    &:focus svg {
+      fill: #BC572B;
+    }
+  }
+
+  &__social-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--grey);
+    @include hover-icon;
+    @include active-icon;
+  }
+}
