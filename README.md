@@ -1,3 +1,6 @@
+In this project, an adaptive photo studio page was created.
+The purpose of this development is to work with the gulp configuration, master css preprocessors and work out the basic functionality of javaScript
+
 # Getting Started
 ## Available Scripts
 
